@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileServiceImpl implements FileService, GenericService {
+public class FileServiceImpl extends Object implements FileService, GenericService {
 
 	@Override
 	public String readLine(File file) throws IOException {
