@@ -31,8 +31,8 @@ public class Person implements Comparable<Person> {
 	// on lines 35 and 37. Not on line 34.
 	@Override
 	public int compareTo(Person that) {
-		if (this.height.compareTo(that.height) == 0) {
-			return this.name.compareTo(that.name); // This will sort names in Ascending order
+		if (this.height.compareTo(that.height) == 0) { // Primary sort
+			return this.name.compareTo(that.name); // Secondary sort when Primary sort are equal or 0. This will sort names in Ascending order
 		} else {
 			return that.height.compareTo(this.height); // This will sort Height in Descending order
 		}
