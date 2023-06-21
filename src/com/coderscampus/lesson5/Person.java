@@ -6,10 +6,20 @@ public class Person implements Comparable<Person>, Serializable {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private Integer height;
-	
+	private String gender;
+
+
 	public Person(String name, Integer height) {
 		this.name = name;
 		this.height = height;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getName() {
@@ -34,14 +44,15 @@ public class Person implements Comparable<Person>, Serializable {
 	@Override
 	public int compareTo(Person that) {
 		if (this.height.compareTo(that.height) == 0) { // Primary sort
-			return this.name.compareTo(that.name); // Secondary sort when Primary sort are equal or 0. This will sort names in Ascending order
+			return this.name.compareTo(that.name); // Secondary sort when Primary sort are equal or 0. This will sort
+													// names in Ascending order
 		} else {
 			return that.height.compareTo(this.height); // This will sort Height in Descending order
 		}
 	}
-	
+
 	// This is another way to solve the sorting problem,
-	// but it's just more code 
+	// but it's just more code
 //	@Override
 //	public int compareTo(Person that) {
 //		if (this.height > that.height) {
@@ -52,7 +63,5 @@ public class Person implements Comparable<Person>, Serializable {
 //			return 1;
 //		}
 //	}
-	
-
 
 }
